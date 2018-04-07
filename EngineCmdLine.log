@@ -1,0 +1,5 @@
+File: C:\Documents and Settings\student\Desktop\system\TestComponent\build\TestComponent.EXE
+Time: Friday, March 31, 2017 02:54:13 PM
+Command:
+  "C:\Program Files\Rational\PurifyPlus\purifye.exe" -purify -purify_home="C:\Program Files\Rational\PurifyPlus" /pwq-instance=0 /AllocCallStackLength=10 /ErrorCallStackLength=10 /PurifyDefaultInstrumentationType=precise /Out="C:/Documents and Settings/student/Desktop/system/TestComponent/build/Purify_TestComponent.EXE" /SaveTextData="C:\Documents and Settings\student\Desktop\system\TestComponent\build\Purify_TestComponent.txt"  -first-search-dir="C:\Documents and Settings\student\Desktop\system\TestComponent\build" -out="C:\Documents and Settings\student\Desktop\system\TestComponent\build\Purify_TestComponent.EXE" -exe_ini_filename="C:\Documents and Settings\student\Desktop\system\TestComponent\build\TestComponent_pure.ini" "C:\Documents and Settings\student\Desktop\system\TestComponent\build\TestComponent.EXE"
+

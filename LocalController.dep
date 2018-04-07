@@ -1,0 +1,11 @@
+LocalController_DEPS = \
+	../src/LocalController.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/LocalController.h \
+	../src/AlarmProtocol.h \
+	../src/CardReaderProtocol.h \
+	../src/Control.h \
+	../src/DoorProtocol.h \
+	../src/SensorProtocol.h \
+	../src/Test.h \
+	../src/CardInfo.h

@@ -1,0 +1,4 @@
+SensorTest_DEPS = \
+	../src/SensorTest.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/SensorTest.h

@@ -1,0 +1,3 @@
+TestComponent_SYSDEPS = \
+	../src/RTSystem/TestComponent.cpp \
+	../src/RTSystem/TestComponent.h

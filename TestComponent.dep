@@ -1,0 +1,59 @@
+TestComponent_SYSTARGET = RTSystem/TestComponent.dep
+TestComponent_SYSDEPS = \
+	"C:/Documents and Settings/student/Desktop/system/system.rtmdl" \
+	"C:/Program Files/Rational/Rose RealTime/C++/RTComponents.rtcmppkg" \
+	"C:/Program Files/Rational/Rose RealTime/C++/RTClasses.rtlogpkg"
+
+TestComponent_SYSTARGET_CS = RTSystem/TestComponent.dep
+TestComponent_SYSDEPS_CS = \
+	RTSystem/TestComponent.cpp \
+	RTSystem/TestComponent.h \
+	ActiveAlarms.cpp \
+	ActiveAlarms.h \
+	Alarm.cpp \
+	Alarm.h \
+	AlarmProtocol.cpp \
+	AlarmProtocol.h \
+	CCAlarmProtocol.cpp \
+	CCAlarmProtocol.h \
+	CardInfo.cpp \
+	CardInfo.h \
+	CardReader.cpp \
+	CardReader.h \
+	CardReaderProtocol.cpp \
+	CardReaderProtocol.h \
+	CardSwipe.cpp \
+	CardSwipe.h \
+	Control.cpp \
+	Control.h \
+	ControlCenter.cpp \
+	ControlCenter.h \
+	Database.cpp \
+	Database.h \
+	DatabaseProtocol.cpp \
+	DatabaseProtocol.h \
+	DeviceInfo.cpp \
+	DeviceInfo.h \
+	Door.cpp \
+	Door.h \
+	DoorProtocol.cpp \
+	DoorProtocol.h \
+	DoorTest.cpp \
+	DoorTest.h \
+	LocalController.cpp \
+	LocalController.h \
+	Printer.cpp \
+	Printer.h \
+	PrinterProtocol.cpp \
+	PrinterProtocol.h \
+	Sensor.cpp \
+	Sensor.h \
+	SensorProtocol.cpp \
+	SensorProtocol.h \
+	SensorTest.cpp \
+	SensorTest.h \
+	Test.cpp \
+	Test.h \
+	controlCenterAlarm.cpp \
+	controlCenterAlarm.h
+

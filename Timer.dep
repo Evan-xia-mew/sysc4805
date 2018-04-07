@@ -1,0 +1,4 @@
+Timer_DEPS = \
+	../src/Timer.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Timer.h

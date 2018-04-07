@@ -1,0 +1,4 @@
+CCAlarmProtocol_DEPS = \
+	../src/CCAlarmProtocol.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/CCAlarmProtocol.h

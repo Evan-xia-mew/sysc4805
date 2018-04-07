@@ -1,0 +1,4 @@
+DeviceInfo_DEPS = \
+	../src/DeviceInfo.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/DeviceInfo.h

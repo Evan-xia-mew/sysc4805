@@ -1,0 +1,5 @@
+CardSwipe_DEPS = \
+	../src/CardSwipe.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/CardSwipe.h \
+	../src/CardInfo.h

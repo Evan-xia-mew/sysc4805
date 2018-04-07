@@ -1,0 +1,5 @@
+Printer_DEPS = \
+	../src/Printer.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Printer.h \
+	../src/PrinterProtocol.h

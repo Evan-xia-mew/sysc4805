@@ -1,0 +1,7 @@
+Door_DEPS = \
+	../src/Door.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Door.h \
+	../src/DeviceInfo.h \
+	../src/DoorProtocol.h \
+	../src/DoorTest.h

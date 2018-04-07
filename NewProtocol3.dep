@@ -1,0 +1,4 @@
+NewProtocol3_DEPS = \
+	../src/NewProtocol3.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/NewProtocol3.h

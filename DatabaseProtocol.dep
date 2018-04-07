@@ -1,0 +1,5 @@
+DatabaseProtocol_DEPS = \
+	../src/DatabaseProtocol.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/DatabaseProtocol.h \
+	../src/CardInfo.h

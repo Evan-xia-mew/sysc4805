@@ -1,0 +1,6 @@
+Database_DEPS = \
+	../src/Database.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Database.h \
+	../src/DatabaseProtocol.h \
+	../src/CardInfo.h

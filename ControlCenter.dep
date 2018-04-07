@@ -1,0 +1,10 @@
+ControlCenter_DEPS = \
+	../src/ControlCenter.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/ControlCenter.h \
+	../src/CCAlarmProtocol.h \
+	../src/Control.h \
+	../src/DatabaseProtocol.h \
+	../src/PrinterProtocol.h \
+	../src/Test.h \
+	../src/CardInfo.h

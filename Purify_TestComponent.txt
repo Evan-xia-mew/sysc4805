@@ -1,0 +1,8 @@
+[I] Starting Purify'd C:\Documents and Settings\student\Desktop\system\TestComponent\build\TestComponent.EXE at 03/31/2017 14:54:14
+        Instrumented executable: C:\Documents and Settings\student\Desktop\system\TestComponent\build\Purify_TestComponent.EXE
+        Working directory:       C:\Documents and Settings\student\Desktop\system
+        Command line arguments:  -obslisten=30387
+        Process ID:              0xe94
+        Thread ID: 0xe20
+[I] Starting main
+[I] Program terminated at 03/31/2017 14:54:22

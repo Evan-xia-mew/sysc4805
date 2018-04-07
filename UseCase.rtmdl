@@ -1,0 +1,3105 @@
+
+(object PetalRT
+	version 60010
+	_written "Rose RealTime 6.5.825.0"
+	charSet 0)
+
+(object Design "Model"
+	generate_guids_all TRUE
+	is_unit TRUE
+	is_loaded TRUE
+	quid "5894EE6C0145"
+	defaults (object defaults
+		rightMargin 0.250000
+		leftMargin 0.250000
+		topMargin 0.250000
+		bottomMargin 0.500000
+		pageOverlap 0.250000
+		clipIconLabels TRUE
+		defaultFont (object Font
+			size 8
+			face "MS Sans Serif"
+			bold FALSE
+			italics FALSE
+			underline FALSE
+			strike FALSE
+			color 16711680
+			default_color TRUE)
+		showClassOfObject TRUE
+		notation "Unified")
+	root_usecase_package (object Class_Category "Use Case View"
+		quid "3619364703C6"
+		global TRUE
+		exportControl "Public"
+		logical_models (list unit_reference_list
+			(object Class "CardHolder"
+				quid "5894EECB03AF"
+				stereotype "Actor"
+				used_nodes (list uses_relationship_list
+					(object Uses_Relationship
+						quid "5894F02001CA"
+						supplier  "Use Case View::Enter/Exit Zone"
+						quidu "5894EF5601EB"))
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$0"
+						quid "5894F2A001C1"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$1"
+								quid "5894F2A001C2"
+								supplier  "Use Case View::CardHolder"
+								quidu "5894EECB03AF")
+							(object AssocEnd "$UNNAMED$2"
+								quid "5894F2A001C3"
+								supplier  "Use Case View::Enter/Exit Zone"
+								quidu "5894EF5601EB"))))
+				language "C++")
+			(object Class "UnauthorizedPerson"
+				quid "5894EF650370"
+				stereotype "Actor"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$3"
+						quid "5894F2F30069"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$4"
+								quid "5894F2F3006A"
+								supplier  "Use Case View::UnauthorizedPerson"
+								quidu "5894EF650370")
+							(object AssocEnd "$UNNAMED$5"
+								quid "5894F2F3006B"
+								supplier  "Use Case View::SensorTriggered"
+								quidu "5894F2C9001B"))))
+				language "C++")
+			(object Class "Sensors"
+				quid "5894EFC70078"
+				stereotype "Actor"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$6"
+						quid "5894F7E7038D"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$7"
+								quid "5894F7E7038E"
+								supplier  "Use Case View::Sensors"
+								quidu "5894EFC70078")
+							(object AssocEnd "$UNNAMED$8"
+								quid "5894F7E7038F"
+								supplier  "Use Case View::SensorTriggered"
+								quidu "5894F2C9001B"))))
+				language "C++")
+			(object Class "Alarms"
+				quid "5894EFD700CF"
+				stereotype "Actor"
+				language "C++")
+			(object Class "ControlCenterOperator"
+				quid "5894F1160249"
+				stereotype "Actor"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$9"
+						quid "5894F241005C"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$10"
+								quid "5894F241005D"
+								supplier  "Use Case View::ControlCenterOperator"
+								quidu "5894F1160249")
+							(object AssocEnd "$UNNAMED$11"
+								quid "5894F241006B"
+								supplier  "Use Case View::DisarmZone"
+								quidu "5894F2310301")))
+					(object Assoc "$UNNAMED$12"
+						quid "5894F2820145"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$13"
+								quid "5894F2820146"
+								supplier  "Use Case View::ControlCenterOperator"
+								quidu "5894F1160249")
+							(object AssocEnd "$UNNAMED$14"
+								quid "5894F2820154"
+								supplier  "Use Case View::ArmZone"
+								quidu "5894F109039E")))
+					(object Assoc "$UNNAMED$15"
+						quid "5894F321035B"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$16"
+								quid "5894F321035C"
+								supplier  "Use Case View::ControlCenterOperator"
+								quidu "5894F1160249")
+							(object AssocEnd "$UNNAMED$17"
+								quid "5894F3210369"
+								supplier  "Use Case View::ResolveSecurityAlarm"
+								quidu "5894F2B70347"))))
+				language "C++")
+			(object Class "ControlCenterDatabase"
+				quid "5894F6C50026"
+				stereotype "Actor"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$18"
+						quid "5894F6D30060"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$19"
+								quid "5894F6D30061"
+								supplier  "Use Case View::ControlCenterDatabase"
+								quidu "5894F6C50026")
+							(object AssocEnd "$UNNAMED$20"
+								quid "5894F6D30062"
+								supplier  "Use Case View::LogEvent"
+								quidu "5894F2AD027C"))))
+				language "C++")
+			(object UseCase "UseCases"
+				quid "5894EE7E01C7"
+				logical_presentations (list unit_reference_list
+					(object UseCaseDiagram "SecurityZoneAccess"
+						quid "5894EEA9007C"
+						items (list diagram_item_list
+							(object UseCaseView "Use Case View::DisarmZone" @1
+								quid "5894F23102A3"
+								pos (783,1419)
+								label (object ItemLabel
+									quid "5894F2310302"
+									pos (783,1552)
+									nlines 2
+									max_width 633
+									label "DisarmZone")
+								icon_style "Icon"
+								quidu "5894F2310301"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UseCaseView "Use Case View::ArmZone" @2
+								quid "5894F1090356"
+								pos (767,1595)
+								label (object ItemLabel
+									quid "5894F109039F"
+									pos (767,1728)
+									nlines 2
+									max_width 633
+									label "ArmZone")
+								icon_style "Icon"
+								quidu "5894F109039E"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object ClassView "Class" "Use Case View::CardHolder" @3
+								ShowCompartmentStereotypes TRUE
+								IncludeAttribute TRUE
+								IncludeOperation TRUE
+								showAggregations TRUE
+								quid "5894EECB0361"
+								pos (202,318)
+								label (object ItemLabel
+									quid "5894EECB0362"
+									pos (202,474)
+									nlines 2
+									max_width 230
+									label "CardHolder")
+								icon "Actor"
+								icon_style "Icon"
+								quidu "5894EECB03AF"
+								width 120
+								height 162
+								annotation 8
+								autoResize TRUE)
+							(object ClassView "Class" "Use Case View::ControlCenterOperator" @4
+								ShowCompartmentStereotypes TRUE
+								IncludeAttribute TRUE
+								IncludeOperation TRUE
+								showAggregations TRUE
+								quid "5894F11601F1"
+								pos (204,1329)
+								label (object ItemLabel
+									quid "5894F11601F2"
+									pos (204,1485)
+									nlines 2
+									max_width 341
+									label "ControlCenterOperator")
+								icon "Actor"
+								icon_style "Icon"
+								quidu "5894F1160249"
+								width 120
+								height 162
+								annotation 8
+								autoResize TRUE)
+							(object AssocVw "$UNNAMED$9" @5
+								quid "5894F2400231"
+								pos (467,1367)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F241005C"
+								roleview_list (list RoleViews
+									(object RoleView "$UNNAMED$11" @6
+										quid "5894F2400232"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F241006B"
+										client @5
+										supplier @1
+										vertices (list Points
+											(467,1367)
+											(677,1398))
+										line_style 6144)
+									(object RoleView "$UNNAMED$10" @7
+										quid "5894F241005B"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F241005D"
+										client @5
+										supplier @4
+										vertices (list Points
+											(467,1367)
+											(258,1336))
+										line_style 6144)))
+							(object AssocVw "$UNNAMED$12" @8
+								quid "5894F281031A"
+								pos (459,1448)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F2820145"
+								roleview_list (list RoleViews
+									(object RoleView "$UNNAMED$14" @9
+										quid "5894F281031B"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F2820154"
+										client @8
+										supplier @2
+										vertices (list Points
+											(459,1448)
+											(660,1543))
+										line_style 6144)
+									(object RoleView "$UNNAMED$13" @10
+										quid "5894F2820144"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F2820146"
+										client @8
+										supplier @4
+										vertices (list Points
+											(459,1448)
+											(258,1353))
+										line_style 6144)))
+							(object UseCaseView "Use Case View::ResolveSecurityAlarm" @11
+								quid "5894F2B702F9"
+								pos (767,1195)
+								label (object ItemLabel
+									quid "5894F2B70357"
+									pos (767,1328)
+									nlines 2
+									max_width 633
+									label "ResolveSecurityAlarm")
+								icon_style "Icon"
+								quidu "5894F2B70347"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object AssocVw "$UNNAMED$15" @12
+								quid "5894F321007F"
+								pos (459,1266)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F321035B"
+								roleview_list (list RoleViews
+									(object RoleView "$UNNAMED$17" @13
+										quid "5894F3210080"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F3210369"
+										client @12
+										supplier @11
+										vertices (list Points
+											(459,1266)
+											(660,1218))
+										line_style 6144)
+									(object RoleView "$UNNAMED$16" @14
+										quid "5894F321035A"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F321035C"
+										client @12
+										supplier @4
+										vertices (list Points
+											(459,1266)
+											(258,1314))
+										line_style 6144)))
+							(object UseCaseView "Use Case View::Enter/Exit Zone" @15
+								quid "5894EF5601AC"
+								pos (735,315)
+								label (object ItemLabel
+									quid "5894EF5601EC"
+									pos (735,448)
+									nlines 2
+									max_width 633
+									label "Enter/Exit Zone")
+								icon_style "Icon"
+								quidu "5894EF5601EB"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object AssocVw "$UNNAMED$0" @16
+								quid "5894F29F029B"
+								pos (441,315)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F2A001C1"
+								roleview_list (list RoleViews
+									(object RoleView "$UNNAMED$2" @17
+										quid "5894F29F029C"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F2A001C3"
+										client @16
+										supplier @15
+										vertices (list Points
+											(441,315)
+											(627,315))
+										line_style 6144)
+									(object RoleView "$UNNAMED$1" @18
+										quid "5894F2A001C0"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F2A001C2"
+										client @16
+										supplier @3
+										vertices (list Points
+											(441,315)
+											(256,315))
+										line_style 6144)))
+							(object UseCaseView "Use Case View::ValidateCard" @19
+								quid "5894F5AA02A1"
+								pos (1279,155)
+								label (object ItemLabel
+									quid "5894F5AA02F6"
+									pos (1279,288)
+									nlines 2
+									max_width 633
+									label "ValidateCard")
+								icon_style "Icon"
+								quidu "5894F5AA02F5"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UsesView "" @20
+								quid "5894F5AC0396"
+								stereotype (object SegLabel @21
+									quid "5894F5E502F7"
+									pos (966,207)
+									font (object Font
+										size 10)
+									positionBySuperclass FALSE
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.409620
+									height 35)
+								uses_fill_color FALSE
+								quidu "5894F5AD01F1"
+								positionBySuperclass FALSE
+								client @15
+								supplier @19
+								vertices (list Points
+									(840,281)
+									(1172,183))
+								line_style 6144)
+							(object UseCaseView "Use Case View::LogEvent" @22
+								quid "5894F2AD021E"
+								pos (1359,635)
+								label (object ItemLabel
+									quid "5894F2AD027D"
+									pos (1359,768)
+									nlines 2
+									max_width 633
+									label "LogEvent")
+								icon_style "Icon"
+								quidu "5894F2AD027C"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UsesView "" @23
+								quid "5894F2FE0191"
+								stereotype (object SegLabel @24
+									quid "5894F30603D2"
+									pos (1076,409)
+									font (object Font
+										size 10)
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.466644
+									height 71)
+								uses_fill_color FALSE
+								quidu "5894F2FF0114"
+								positionBySuperclass FALSE
+								client @15
+								supplier @22
+								vertices (list Points
+									(858,376)
+									(1256,581))
+								line_style 6144)
+							(object UsesView "" @25
+								quid "5894F63A0001"
+								stereotype (object SegLabel @26
+									quid "5894F63F0171"
+									pos (1073,1018)
+									font (object Font
+										size 10)
+									positionBySuperclass FALSE
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.423313
+									height 84
+									orientation 1)
+								uses_fill_color FALSE
+								quidu "5894F63A02E6"
+								positionBySuperclass FALSE
+								client @11
+								supplier @22
+								vertices (list Points
+									(821,1139)
+									(1280,708))
+								line_style 6144)
+							(object ClassView "Class" "Use Case View::ControlCenterDatabase" @27
+								ShowCompartmentStereotypes TRUE
+								IncludeAttribute TRUE
+								IncludeOperation TRUE
+								showAggregations TRUE
+								quid "5894F6C403C0"
+								pos (2060,289)
+								label (object ItemLabel
+									quid "5894F6C403C1"
+									pos (2060,445)
+									nlines 2
+									max_width 350
+									label "ControlCenterDatabase")
+								icon "Actor"
+								icon_style "Icon"
+								quidu "5894F6C50026"
+								width 120
+								height 162
+								annotation 8
+								autoResize TRUE)
+							(object AssocVw "" @28
+								quid "5894F6E403C2"
+								pos (1694,224)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F6E50318"
+								roleview_list (list RoleViews
+									(object RoleView "" @29
+										quid "5894F6E403C3"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F6E5031A"
+										client @28
+										supplier @27
+										vertices (list Points
+											(1694,224)
+											(2005,277))
+										line_style 6144)
+									(object RoleView "" @30
+										quid "5894F6E50317"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F6E50319"
+										client @28
+										supplier @19
+										vertices (list Points
+											(1694,224)
+											(1384,172))
+										line_style 6144)))
+							(object AssocVw "" @31
+								quid "5894F6F600FC"
+								pos (1672,478)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F6F6039C"
+								roleview_list (list RoleViews
+									(object RoleView "" @32
+										quid "5894F6F600FD"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F6F6039E"
+										client @31
+										supplier @27
+										vertices (list Points
+											(1672,478)
+											(1881,376))
+										line_style 6144)
+									(object RoleView "" @33
+										quid "5894F6F6039B"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F6F6039D"
+										client @31
+										supplier @22
+										vertices (list Points
+											(1672,478)
+											(1463,581))
+										line_style 6144)))
+							(object UseCaseView "Use Case View::TurnAlarmOn" @34
+								quid "5894F33F01C0"
+								pos (1519,1035)
+								label (object ItemLabel
+									quid "5894F33F024D"
+									pos (1519,1168)
+									nlines 2
+									max_width 633
+									label "TurnAlarmOn")
+								icon_style "Icon"
+								quidu "5894F33F024C"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UseCaseView "Use Case View::TurnAlarmOff" @35
+								quid "5894F71B0174"
+								pos (1519,1275)
+								label (object ItemLabel
+									quid "5894F71B01C3"
+									pos (1519,1408)
+									nlines 2
+									max_width 633
+									label "TurnAlarmOff")
+								icon_style "Icon"
+								quidu "5894F71B01C2"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UsesView "" @36
+								quid "5894F7230283"
+								stereotype (object SegLabel @37
+									quid "5894F7320165"
+									pos (1152,1191)
+									font (object Font
+										size 10)
+									positionBySuperclass FALSE
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.510531
+									height 42)
+								uses_fill_color FALSE
+								quidu "5894F724007F"
+								positionBySuperclass FALSE
+								client @11
+								supplier @35
+								vertices (list Points
+									(872,1204)
+									(1412,1260))
+								line_style 6144)
+							(object ClassView "Class" "Use Case View::Alarms" @38
+								ShowCompartmentStereotypes TRUE
+								IncludeAttribute TRUE
+								IncludeOperation TRUE
+								showAggregations TRUE
+								quid "5894F7070174"
+								pos (2188,1617)
+								label (object ItemLabel
+									quid "5894F7070175"
+									pos (2188,1773)
+									nlines 2
+									max_width 230
+									label "Alarms")
+								icon "Actor"
+								icon_style "Icon"
+								quidu "5894EFD700CF"
+								width 120
+								height 162
+								annotation 8
+								autoResize TRUE)
+							(object AssocVw "" @39
+								quid "5894F735001A"
+								pos (1877,1346)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F73502E9"
+								roleview_list (list RoleViews
+									(object RoleView "" @40
+										quid "5894F735001B"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F73502EB"
+										client @39
+										supplier @38
+										vertices (list Points
+											(1877,1346)
+											(2133,1567))
+										line_style 6144)
+									(object RoleView "" @41
+										quid "5894F73502E8"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F73502EA"
+										client @39
+										supplier @34
+										vertices (list Points
+											(1877,1346)
+											(1622,1125))
+										line_style 6144)))
+							(object AssocVw "" @42
+								quid "5894F7370352"
+								pos (1877,1457)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F73801FA"
+								roleview_list (list RoleViews
+									(object RoleView "" @43
+										quid "5894F7370353"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F73801FC"
+										client @42
+										supplier @38
+										vertices (list Points
+											(1877,1457)
+											(2133,1587))
+										line_style 6144)
+									(object RoleView "" @44
+										quid "5894F73801F9"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F73801FB"
+										client @42
+										supplier @35
+										vertices (list Points
+											(1877,1457)
+											(1622,1328))
+										line_style 6144)))
+							(object UseCaseView "Use Case View::SensorTriggered" @45
+								quid "5894F2C803B5"
+								pos (575,731)
+								label (object ItemLabel
+									quid "5894F2C9001C"
+									pos (575,864)
+									nlines 2
+									max_width 633
+									label "SensorTriggered")
+								icon_style "Icon"
+								quidu "5894F2C9001B"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UsesView "" @46
+								quid "5894F30101BF"
+								stereotype (object SegLabel @47
+									quid "5894F30B0077"
+									pos (1014,605)
+									font (object Font
+										size 10)
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.598032
+									height 69)
+								uses_fill_color FALSE
+								quidu "5894F30103D3"
+								client @45
+								supplier @22
+								vertices (list Points
+									(680,714)
+									(1252,647))
+								line_style 6144)
+							(object UsesView "" @48
+								quid "5894F5D10322"
+								stereotype (object SegLabel @49
+									quid "5894F5DF0276"
+									pos (1015,795)
+									font (object Font
+										size 10)
+									positionBySuperclass FALSE
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.427326
+									height 72)
+								uses_fill_color FALSE
+								quidu "5894F5D30149"
+								positionBySuperclass FALSE
+								client @45
+								supplier @34
+								vertices (list Points
+									(680,763)
+									(1412,999))
+								line_style 6144)
+							(object UseCaseView "Use Case View::SelfTest" @50
+								quid "5894F1390187"
+								pos (1535,1515)
+								label (object ItemLabel
+									quid "5894F13901D7"
+									pos (1535,1648)
+									nlines 2
+									max_width 633
+									label "SelfTest")
+								icon_style "Icon"
+								quidu "5894F13901D6"
+								width 222
+								height 117
+								autoResize TRUE)
+							(object UsesView "" @51
+								quid "5894F20E0005"
+								stereotype (object SegLabel @52
+									quid "5894F21A0198"
+									pos (1159,1511)
+									font (object Font
+										size 10)
+									positionBySuperclass FALSE
+									anchor 10
+									max_width 222
+									label "<<include>>"
+									pctDist 0.522434
+									height 40)
+								uses_fill_color FALSE
+								quidu "5894F20E0217"
+								positionBySuperclass FALSE
+								client @2
+								supplier @50
+								vertices (list Points
+									(872,1580)
+									(1429,1524))
+								line_style 6144)
+							(object AssocVw "" @53
+								quid "5894F7650084"
+								pos (1886,1567)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F7660026"
+								roleview_list (list RoleViews
+									(object RoleView "" @54
+										quid "5894F7650085"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F7660028"
+										client @53
+										supplier @38
+										vertices (list Points
+											(1886,1567)
+											(2133,1605))
+										line_style 6144)
+									(object RoleView "" @55
+										quid "5894F7660025"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F7660027"
+										client @53
+										supplier @50
+										vertices (list Points
+											(1886,1567)
+											(1640,1529))
+										line_style 6144)))
+							(object ClassView "Class" "Use Case View::Sensors" @56
+								ShowCompartmentStereotypes TRUE
+								IncludeAttribute TRUE
+								IncludeOperation TRUE
+								showAggregations TRUE
+								quid "5894F7DD0216"
+								pos (204,769)
+								label (object ItemLabel
+									quid "5894F7DD0217"
+									pos (204,925)
+									nlines 2
+									max_width 230
+									label "Sensors")
+								icon "Actor"
+								icon_style "Icon"
+								quidu "5894EFC70078"
+								width 120
+								height 162
+								annotation 8
+								autoResize TRUE)
+							(object AssocVw "$UNNAMED$6" @57
+								quid "5894F7E7014B"
+								pos (362,750)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F7E7038D"
+								roleview_list (list RoleViews
+									(object RoleView "$UNNAMED$8" @58
+										quid "5894F7E7014C"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F7E7038F"
+										client @57
+										supplier @45
+										vertices (list Points
+											(362,750)
+											(467,740))
+										line_style 6144)
+									(object RoleView "$UNNAMED$7" @59
+										quid "5894F7E7038C"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F7E7038E"
+										client @57
+										supplier @56
+										vertices (list Points
+											(362,750)
+											(258,761))
+										line_style 6144)))
+							(object AssocVw "" @60
+								quid "5894F83200C6"
+								pos (848,1128)
+								stereotype TRUE
+								uses_fill_color FALSE
+								quidu "5894F83301B0"
+								roleview_list (list RoleViews
+									(object RoleView "" @61
+										quid "5894F83200D6"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F83301B2"
+										client @60
+										supplier @56
+										vertices (list Points
+											(848,1128)
+											(258,798))
+										line_style 6144)
+									(object RoleView "" @62
+										quid "5894F83301AF"
+										stereotype TRUE
+										uses_fill_color FALSE
+										quidu "5894F83301B1"
+										client @60
+										supplier @50
+										vertices (list Points
+											(848,1128)
+											(1439,1459))
+										line_style 6144)))))))
+			(object UseCase "Enter/Exit Zone"
+				quid "5894EF5601EB"
+				used_nodes (list uses_relationship_list
+					(object Uses_Relationship
+						quid "5894F2FF0114"
+						stereotype "include"
+						supplier  "Use Case View::LogEvent"
+						quidu "5894F2AD027C")
+					(object Uses_Relationship
+						quid "5894F5AD01F1"
+						stereotype "include"
+						supplier  "Use Case View::ValidateCard"
+						quidu "5894F5AA02F5"))
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$21"
+						quid "5894F3DB03AE"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$22"
+								quid "5894F3DB03AF"
+								supplier  "Use Case View::Enter/Exit Zone"
+								quidu "5894EF5601EB")
+							(object AssocEnd "$UNNAMED$23"
+								quid "5894F3DB03B0"
+								supplier  "Use Case View::DoorUnlock"
+								quidu "5894F3D40151"
+								is_navigable TRUE)))))
+			(object UseCase "ArmZone"
+				quid "5894F109039E"
+				used_nodes (list uses_relationship_list
+					(object Uses_Relationship
+						quid "5894F20E0217"
+						stereotype "include"
+						supplier  "Use Case View::SelfTest"
+						quidu "5894F13901D6")))
+			(object UseCase "SelfTest"
+				quid "5894F13901D6"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$24"
+						quid "5894F7660026"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$25"
+								quid "5894F7660027"
+								supplier  "Use Case View::SelfTest"
+								quidu "5894F13901D6")
+							(object AssocEnd "$UNNAMED$26"
+								quid "5894F7660028"
+								supplier  "Use Case View::Alarms"
+								quidu "5894EFD700CF"
+								is_navigable TRUE)))
+					(object Assoc "$UNNAMED$27"
+						quid "5894F83301B0"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$28"
+								quid "5894F83301B1"
+								supplier  "Use Case View::SelfTest"
+								quidu "5894F13901D6")
+							(object AssocEnd "$UNNAMED$29"
+								quid "5894F83301B2"
+								supplier  "Use Case View::Sensors"
+								quidu "5894EFC70078"
+								is_navigable TRUE)))))
+			(object UseCase "DisarmZone"
+				quid "5894F2310301")
+			(object UseCase "LogEvent"
+				quid "5894F2AD027C"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$30"
+						quid "5894F6F6039C"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$31"
+								quid "5894F6F6039D"
+								supplier  "Use Case View::LogEvent"
+								quidu "5894F2AD027C")
+							(object AssocEnd "$UNNAMED$32"
+								quid "5894F6F6039E"
+								supplier  "Use Case View::ControlCenterDatabase"
+								quidu "5894F6C50026"
+								is_navigable TRUE)))))
+			(object UseCase "ResolveSecurityAlarm"
+				quid "5894F2B70347"
+				used_nodes (list uses_relationship_list
+					(object Uses_Relationship
+						quid "5894F63A02E6"
+						stereotype "include"
+						supplier  "Use Case View::LogEvent"
+						quidu "5894F2AD027C")
+					(object Uses_Relationship
+						quid "5894F724007F"
+						stereotype "include"
+						supplier  "Use Case View::TurnAlarmOff"
+						quidu "5894F71B01C2")))
+			(object UseCase "SensorTriggered"
+				quid "5894F2C9001B"
+				used_nodes (list uses_relationship_list
+					(object Uses_Relationship
+						quid "5894F30103D3"
+						stereotype "include"
+						supplier  "Use Case View::LogEvent"
+						quidu "5894F2AD027C")
+					(object Uses_Relationship
+						quid "5894F5D30149"
+						stereotype "include"
+						supplier  "Use Case View::TurnAlarmOn"
+						quidu "5894F33F024C"))
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$33"
+						quid "5894F3B40245"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$34"
+								quid "5894F3B40246"
+								supplier  "Use Case View::SensorTriggered"
+								quidu "5894F2C9001B")
+							(object AssocEnd "$UNNAMED$35"
+								quid "5894F3B40247"
+								supplier  "Use Case View::TurnAlarmOn"
+								quidu "5894F33F024C"
+								is_navigable TRUE)))))
+			(object UseCase "TurnAlarmOn"
+				quid "5894F33F024C"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$36"
+						quid "5894F73502E9"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$37"
+								quid "5894F73502EA"
+								supplier  "Use Case View::TurnAlarmOn"
+								quidu "5894F33F024C")
+							(object AssocEnd "$UNNAMED$38"
+								quid "5894F73502EB"
+								supplier  "Use Case View::Alarms"
+								quidu "5894EFD700CF"
+								is_navigable TRUE)))))
+			(object UseCase "NewUseCase1"
+				quid "5894F3C20251")
+			(object UseCase "DoorUnlock"
+				quid "5894F3D40151")
+			(object UseCase "ValidateCard"
+				quid "5894F5AA02F5"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$39"
+						quid "5894F6E50318"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$40"
+								quid "5894F6E50319"
+								supplier  "Use Case View::ValidateCard"
+								quidu "5894F5AA02F5")
+							(object AssocEnd "$UNNAMED$41"
+								quid "5894F6E5031A"
+								supplier  "Use Case View::ControlCenterDatabase"
+								quidu "5894F6C50026"
+								is_navigable TRUE)))))
+			(object UseCase "TurnAlarmOff"
+				quid "5894F71B01C2"
+				assocsOwned (list assocsOwnedList
+					(object Assoc "$UNNAMED$42"
+						quid "5894F73801FA"
+						ends (list endsList
+							(object AssocEnd "$UNNAMED$43"
+								quid "5894F73801FB"
+								supplier  "Use Case View::TurnAlarmOff"
+								quidu "5894F71B01C2")
+							(object AssocEnd "$UNNAMED$44"
+								quid "5894F73801FC"
+								supplier  "Use Case View::Alarms"
+								quidu "5894EFD700CF"
+								is_navigable TRUE))))))
+		logical_presentations (list unit_reference_list
+			(object UseCaseDiagram "Main"
+				quid "3619364703E4")))
+	root_category (object Class_Category "Logical View"
+		quid "5894EE6C0146"
+		exportControl "Public"
+		logical_models (list unit_reference_list
+			(object Class_Category "RTClasses"
+				is_unit TRUE
+				is_loaded FALSE
+				file_name "$ROSERT_HOME\\C++\\RTClasses.rtlogpkg"
+				isOwned FALSE
+				quid "37F129B10358"))
+		logical_presentations (list unit_reference_list
+			(object ClassDiagram "Main"
+				quid "3619364703D4")))
+	root_subsystem (object SubSystem "Component View"
+		quid "5894EE6C0148"
+		physical_models (list unit_reference_list
+			(object SubSystem "RTComponents"
+				is_unit TRUE
+				is_loaded FALSE
+				file_name "$ROSERT_HOME\\C++\\RTComponents.rtcmppkg"
+				isOwned FALSE
+				quid "37F129B1035A"))
+		physical_presentations (list unit_reference_list
+			(object Module_Diagram "Main"
+				quid "36641F810172")))
+	process_structure (object Processes "Deployment View"
+		quid "3619364703C8"
+		ProcsNDevs (list
+			(object Process_Diagram "Main"
+				quid "3619364703CA")))
+	properties (object Properties
+		attributes (list Attribute_Set
+			(object Attribute
+				tool "OT::C"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C Version"
+				name "default__Version"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C Version"
+						name "Version"
+						value 6404)))
+			(object Attribute
+				tool "OT::C"
+				name "default__Attribute"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::C"
+						name "AttributeKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "normal"
+								value 0)
+							(object Attribute
+								tool "OT::C"
+								name "constant"
+								value 2)))
+					(object Attribute
+						tool "OT::C"
+						name "AttributeKind"
+						value ("AttributeKindSet" 0))
+					(object Attribute
+						tool "OT::C"
+						name "InitializerKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "assignment"
+								value 0)
+							(object Attribute
+								tool "OT::C"
+								name "call construct function"
+								value 1)))
+					(object Attribute
+						tool "OT::C"
+						name "InitializerKind"
+						value ("InitializerKindSet" 0))
+					(object Attribute
+						tool "OT::C"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationEnding"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::C"
+				name "default__Capsule"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::C"
+						name "GenerateConstructFunction"
+						value TRUE)
+					(object Attribute
+						tool "OT::C"
+						name "GlobalPrefix"
+						value "")
+					(object Attribute
+						tool "OT::C"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationEnding"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::C"
+				name "default__Class"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::C"
+						name "GenerateClass"
+						value TRUE)
+					(object Attribute
+						tool "OT::C"
+						name "GenerateStateMachine"
+						value TRUE)
+					(object Attribute
+						tool "OT::C"
+						name "ClassKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "none (deprecated)"
+								value 4)
+							(object Attribute
+								tool "OT::C"
+								name "struct"
+								value 1)
+							(object Attribute
+								tool "OT::C"
+								name "typedef"
+								value 3)
+							(object Attribute
+								tool "OT::C"
+								name "union"
+								value 2)))
+					(object Attribute
+						tool "OT::C"
+						name "ClassKind"
+						value ("ClassKindSet" 1))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationType"
+						value "")
+					(object Attribute
+						tool "OT::C"
+						name "ConstructFunctionName"
+						value "${name}_construct")
+					(object Attribute
+						tool "OT::C"
+						name "GlobalPrefix"
+						value "")
+					(object Attribute
+						tool "OT::C"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::C"
+						name "ImplementationEnding"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::C"
+				name "default__Role"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::C"
+						name "AssociationEndKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "member"
+								value 0)
+							(object Attribute
+								tool "OT::C"
+								name "global"
+								value 1)))
+					(object Attribute
+						tool "OT::C"
+						name "AssociationEndKind"
+						value ("AssociationEndKindSet" 0))
+					(object Attribute
+						tool "OT::C"
+						name "InitializerKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "assignment"
+								value 0)
+							(object Attribute
+								tool "OT::C"
+								name "call construct function"
+								value 1)))
+					(object Attribute
+						tool "OT::C"
+						name "InitializerKind"
+						value ("InitializerKindSet" 0))
+					(object Attribute
+						tool "OT::C"
+						name "InitialValue"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::C"
+				name "default__Uses"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::C"
+						name "KindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::C"
+								name "none"
+								value 2)
+							(object Attribute
+								tool "OT::C"
+								name "forward reference"
+								value 1)
+							(object Attribute
+								tool "OT::C"
+								name "inclusion"
+								value 0)))
+					(object Attribute
+						tool "OT::C"
+						name "KindInHeader"
+						value ("KindSet" 1))
+					(object Attribute
+						tool "OT::C"
+						name "KindInImplementation"
+						value ("KindSet" 0))))
+			(object Attribute
+				tool "OT::C"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CExec"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CExec"
+				name "default__Capsule"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CExec"
+						name "Capsule To Logical Thread Mapping"
+						value (value Event ""))))
+			(object Attribute
+				tool "OT::CExec"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CExec"
+						name "TopCapsule"
+						value (value Event 
+|[event_ui
+|	description='<none selected>'
+|	caption='Select...']
+						))
+					(object Attribute
+						tool "OT::CExec"
+						name "PhysicalThreads"
+						value (value Event 
+|[MainThread
+|	Priority='DEFAULT_MAIN_PRIORITY'
+|	StackSize='20000'
+|	FreeMessageQueueSize='DEFAULT_FREE_MSGQ_SIZE']
+						))
+					(object Attribute
+						tool "OT::CExec"
+						name "ExecutableName"
+						value "$name$(EXEC_EXT)")
+					(object Attribute
+						tool "OT::CExec"
+						name "DefaultArguments"
+						value "")
+					(object Attribute
+						tool "OT::CExec"
+						name "LinkCommand"
+						value "$(LD)")
+					(object Attribute
+						tool "OT::CExec"
+						name "LinkArguments"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CExec"
+						name "UserObjectFiles"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CExec"
+						name "UserLibraries"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CExec"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CExtLib"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CExtLib"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CExtLib"
+						name "IncludeFilename"
+						value "")
+					(object Attribute
+						tool "OT::CExtLib"
+						name "GenerateClassInclusions"
+						value TRUE)
+					(object Attribute
+						tool "OT::CExtLib"
+						name "CodeGenDirName"
+						value "")
+					(object Attribute
+						tool "OT::CExtLib"
+						name "InclusionPaths"
+						value (value Event ""))
+					(object Attribute
+						tool "OT::CExtLib"
+						name "Libraries"
+						value (value Event ""))))
+			(object Attribute
+				tool "OT::CExtLib"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CLib"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CLib"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CLib"
+						name "LibraryName"
+						value "$(LIB_PFX)$name$(LIB_EXT)")
+					(object Attribute
+						tool "OT::CLib"
+						name "BuildLibraryCommand"
+						value "$(AR_CMD)")
+					(object Attribute
+						tool "OT::CLib"
+						name "BuildLibraryArguments"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CLib"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CTargetRSL"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C Generation"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C Compilation"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CTargetRSL"
+				name "default__Class"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateDescriptorSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::CTargetRSL"
+								name "True"
+								value 0)
+							(object Attribute
+								tool "OT::CTargetRSL"
+								name "DebugOnly"
+								value 1)
+							(object Attribute
+								tool "OT::CTargetRSL"
+								name "False"
+								value 2)
+							(object Attribute
+								tool "OT::CTargetRSL"
+								name "Manual"
+								value 3)))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateDescriptor"
+						value ("GenerateDescriptorSet" 0))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "Version"
+						value 0)
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "InitFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "CopyFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "DestroyFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "DecodeFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "EncodeFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CTargetRSL"
+				name "default__Attribute"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateDescriptor"
+						value TRUE)
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "TypeDescriptor"
+						value "")
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateTypeModifier"
+						value TRUE)
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "NumElementsFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CTargetRSL"
+				name "default__Role"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateDescriptor"
+						value TRUE)
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "TypeDescriptor"
+						value "")
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "GenerateTypeModifier"
+						value TRUE)
+					(object Attribute
+						tool "OT::CTargetRSL"
+						name "NumElementsFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "C Generation"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C Generation"
+						name "OutputDirectory"
+						value "$@/$name")
+					(object Attribute
+						tool "C Generation"
+						name "CodeGenDirName"
+						value "")
+					(object Attribute
+						tool "C Generation"
+						name "ComponentUnitDirectory"
+						value "RTSystem")
+					(object Attribute
+						tool "C Generation"
+						name "ComponentUnitName"
+						value "$name")
+					(object Attribute
+						tool "C Generation"
+						name "CommonPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "C Generation"
+						name "MakeTypeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C Generation"
+								name "<default>"
+								value 100)
+							(object Attribute
+								tool "C Generation"
+								name "MS_nmake"
+								value 0)
+							(object Attribute
+								tool "C Generation"
+								name "Unix_make"
+								value 1)
+							(object Attribute
+								tool "C Generation"
+								name "Gnu_make"
+								value 2)
+							(object Attribute
+								tool "C Generation"
+								name "ClearCase_clearmake"
+								value 3)
+							(object Attribute
+								tool "C Generation"
+								name "ClearCase_omake"
+								value 4)))
+					(object Attribute
+						tool "C Generation"
+						name "CodeGenMakeType"
+						value ("MakeTypeSet" 100))
+					(object Attribute
+						tool "C Generation"
+						name "CodeGenMakeCommand"
+						value "$defaultMakeCommand")
+					(object Attribute
+						tool "C Generation"
+						name "CodeGenMakeArguments"
+						value "-s")
+					(object Attribute
+						tool "C Generation"
+						name "CodeGenMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "C Generation"
+						name "CodeSyncEnabled"
+						value TRUE)
+					(object Attribute
+						tool "C Generation"
+						name "Generate model tags"
+						value TRUE)
+					(object Attribute
+						tool "C Generation"
+						name "SingleDataCompilationUnit"
+						value FALSE)
+					(object Attribute
+						tool "C Generation"
+						name "DocumentationSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C Generation"
+								name "do not generate"
+								value 0)
+							(object Attribute
+								tool "C Generation"
+								name "prefer in header"
+								value 1)
+							(object Attribute
+								tool "C Generation"
+								name "prefer in implementation"
+								value 2)
+							(object Attribute
+								tool "C Generation"
+								name "only in header"
+								value 3)
+							(object Attribute
+								tool "C Generation"
+								name "only in implementation"
+								value 4)))
+					(object Attribute
+						tool "C Generation"
+						name "Association end documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Attribute documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Capsule documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Capsule role documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Choice point documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Class documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Operation documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Port documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Protocol documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "State documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C Generation"
+						name "Transition documentation"
+						value ("DocumentationSet" 0))))
+			(object Attribute
+				tool "C Compilation"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C Compilation"
+						name "TargetServicesLibrary"
+						value "$ROSERT_HOME/C/TargetRTS")
+					(object Attribute
+						tool "C Compilation"
+						name "TargetConfiguration"
+						value (value Event 
+|[event_ui
+|	description='<none selected>'
+|	caption='Select...']
+						))
+					(object Attribute
+						tool "C Compilation"
+						name "MakeTypeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C Compilation"
+								name "<default>"
+								value 100)
+							(object Attribute
+								tool "C Compilation"
+								name "MS_nmake"
+								value 0)
+							(object Attribute
+								tool "C Compilation"
+								name "Unix_make"
+								value 1)
+							(object Attribute
+								tool "C Compilation"
+								name "Gnu_make"
+								value 2)
+							(object Attribute
+								tool "C Compilation"
+								name "ClearCase_clearmake"
+								value 3)
+							(object Attribute
+								tool "C Compilation"
+								name "ClearCase_omake"
+								value 4)))
+					(object Attribute
+						tool "C Compilation"
+						name "CompilationMakeType"
+						value ("MakeTypeSet" 100))
+					(object Attribute
+						tool "C Compilation"
+						name "CompilationMakeCommand"
+						value "rtperl -S rtsetup.pl $defaultMakeCommand")
+					(object Attribute
+						tool "C Compilation"
+						name "CompilationMakeArguments"
+						value "-k -s")
+					(object Attribute
+						tool "C Compilation"
+						name "CompilationMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "C Compilation"
+						name "CompileCommand"
+						value "$(CC)")
+					(object Attribute
+						tool "C Compilation"
+						name "CompileArguments"
+						value "$(DEBUG_TAG)")
+					(object Attribute
+						tool "C Compilation"
+						name "InclusionPaths"
+						value (value Event ""))))
+			(object Attribute
+				tool "OT::CTargetRSL"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::Cpp"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C++ Version"
+				name "default__Version"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C++ Version"
+						name "Version"
+						value 6404)))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Attribute"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "AttributeKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "constant"
+								value 2)
+							(object Attribute
+								tool "OT::Cpp"
+								name "global"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "member"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "mutable member"
+								value 3)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "AttributeKind"
+						value ("AttributeKindSet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InitializerKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "assignment"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "constructor"
+								value 1)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InitializerKind"
+						value ("InitializerKindSet" 1))
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationEnding"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Capsule"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "PublicDeclarations"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ProtectedDeclarations"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "PrivateDeclarations"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Class"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateClass"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateStateMachine"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "ClassKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "none (deprecated)"
+								value 4)
+							(object Attribute
+								tool "OT::Cpp"
+								name "class"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "struct"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "typedef"
+								value 3)
+							(object Attribute
+								tool "OT::Cpp"
+								name "union"
+								value 2)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ClassKind"
+						value ("ClassKindSet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationType"
+						value "")
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ImplementationEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "PublicDeclarations"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "ProtectedDeclarations"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "PrivateDeclarations"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "VisibilitySet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "public"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "protected"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "private"
+								value 2)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateDefaultConstructor"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "DefaultConstructorVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "DefaultConstructorExplicit"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "DefaultConstructorInline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateCopyConstructor"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "CopyConstructorVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "CopyConstructorExplicit"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "CopyConstructorInline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateDestructor"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "DestructorVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "DestructorVirtual"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "DestructorInline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateAssignmentOperator"
+						value TRUE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "AssignmentOperatorVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "AssignmentOperatorInline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateEqualityOperator"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "EqualityOperatorsVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "EqualityOperatorInline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateInequalityOperator"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "InequalityOperatorsVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InequalityOperatorInline"
+						value FALSE)))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Inherit"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "InstanceArguments"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Operation"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "OperationKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "friend"
+								value 2)
+							(object Attribute
+								tool "OT::Cpp"
+								name "global"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "member"
+								value 0)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "OperationKind"
+						value ("OperationKindSet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "GenerateKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "declaration and definition"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "declaration only"
+								value 1)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "Generate"
+						value ("GenerateKindSet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "Inline"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "ConstructorExplicit"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "ConstructorInitializer"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::Cpp"
+						name "CallFromDestructor"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "Declare exceptions"
+						value FALSE)
+					(object Attribute
+						tool "OT::Cpp"
+						name "Exceptions"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Role"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "AssociationEndKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "global"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "member"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "mutable member"
+								value 3)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "AssociationEndKind"
+						value ("AssociationEndKindSet" 0))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InitializerKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "assignment"
+								value 0)
+							(object Attribute
+								tool "OT::Cpp"
+								name "constructor"
+								value 1)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InitializerKind"
+						value ("InitializerKindSet" 1))
+					(object Attribute
+						tool "OT::Cpp"
+						name "InitialValue"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "default__Uses"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::Cpp"
+						name "KindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::Cpp"
+								name "none"
+								value 2)
+							(object Attribute
+								tool "OT::Cpp"
+								name "forward reference"
+								value 1)
+							(object Attribute
+								tool "OT::Cpp"
+								name "inclusion"
+								value 0)))
+					(object Attribute
+						tool "OT::Cpp"
+						name "KindInHeader"
+						value ("KindSet" 1))
+					(object Attribute
+						tool "OT::Cpp"
+						name "KindInImplementation"
+						value ("KindSet" 0))))
+			(object Attribute
+				tool "OT::Cpp"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CppExec"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CppExec"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppExec"
+						name "TopCapsule"
+						value (value Event 
+|[event_ui 
+|	description='<none selected>'
+|	caption='Select...']
+						))
+					(object Attribute
+						tool "OT::CppExec"
+						name "PhysicalThreads"
+						value (value Event 
+|[MainThread
+|	Priority='DEFAULT_MAIN_PRIORITY'
+|	StackSize='20000'
+|	ImplementationClass='RTPeerController']
+|[TimerThread
+|	Priority='DEFAULT_TIMER_PRIORITY'
+|	StackSize='20000'
+|	ImplementationClass='RTTimerController']
+						))
+					(object Attribute
+						tool "OT::CppExec"
+						name "ExecutableName"
+						value "$name$(EXEC_EXT)")
+					(object Attribute
+						tool "OT::CppExec"
+						name "DefaultArguments"
+						value "")
+					(object Attribute
+						tool "OT::CppExec"
+						name "LinkCommand"
+						value "$(LD)")
+					(object Attribute
+						tool "OT::CppExec"
+						name "LinkArguments"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppExec"
+						name "UserObjectFiles"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppExec"
+						name "UserLibraries"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CppExec"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CppExtLib"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CppExtLib"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "IncludeFilename"
+						value "")
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "GenerateClassInclusions"
+						value TRUE)
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "CodeGenDirName"
+						value "")
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "InclusionPaths"
+						value (value Event ""))
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "Libraries"
+						value (value Event ""))
+					(object Attribute
+						tool "OT::CppExtLib"
+						name "LogicalThreads"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CppExtLib"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CppLib"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CppLib"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppLib"
+						name "LibraryName"
+						value "$(LIB_PFX)$name$(LIB_EXT)")
+					(object Attribute
+						tool "OT::CppLib"
+						name "BuildLibraryCommand"
+						value "$(AR_CMD)")
+					(object Attribute
+						tool "OT::CppLib"
+						name "BuildLibraryArguments"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppLib"
+						name "LogicalThreads"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppLib"
+						name "InterfaceVisibilityKindSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::CppLib"
+								name "Public"
+								value 0)
+							(object Attribute
+								tool "OT::CppLib"
+								name "Limited Public"
+								value 1)
+							(object Attribute
+								tool "OT::CppLib"
+								name "Private"
+								value 2)))
+					(object Attribute
+						tool "OT::CppLib"
+						name "DefaultInterfaceVisibility"
+						value ("InterfaceVisibilityKindSet" 1))
+					(object Attribute
+						tool "OT::CppLib"
+						name "SharedLogicalViewPackageName"
+						value "")
+					(object Attribute
+						tool "OT::CppLib"
+						name "SharedComponentViewPackageName"
+						value "")
+					(object Attribute
+						tool "OT::CppLib"
+						name "SetInterface"
+						value (value Event 
+|[event_ui 
+|	caption='Edit...']
+						))
+					(object Attribute
+						tool "OT::CppLib"
+						name "InclusionPaths"
+						value (value Event ""))
+					(object Attribute
+						tool "OT::CppLib"
+						name "Libraries"
+						value (value Event ""))))
+			(object Attribute
+				tool "OT::CppLib"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C++ Generation"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "C++ Compilation"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "default__Class"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateDescriptorSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "OT::CppTargetRTS"
+								name "True"
+								value 0)
+							(object Attribute
+								tool "OT::CppTargetRTS"
+								name "DebugOnly"
+								value 1)
+							(object Attribute
+								tool "OT::CppTargetRTS"
+								name "False"
+								value 2)
+							(object Attribute
+								tool "OT::CppTargetRTS"
+								name "Manual"
+								value 3)))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateDescriptor"
+						value ("GenerateDescriptorSet" 0))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "Version"
+						value 0)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "InitFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "CopyFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "DestroyFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "DecodeFunctionBody"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "EncodeFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "default__Attribute"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateDescriptor"
+						value TRUE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "TypeDescriptor"
+						value "")
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateTypeModifier"
+						value TRUE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "NumElementsFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "default__Role"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateDescriptor"
+						value TRUE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "TypeDescriptor"
+						value "")
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "GenerateTypeModifier"
+						value TRUE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "NumElementsFunctionBody"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "default__Protocol"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "Version"
+						value 0)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "BackwardsCompatible"
+						value FALSE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "RunTimeBackwardsCompatible"
+						value FALSE)
+					(object Attribute
+						tool "OT::CppTargetRTS"
+						name "TypeSafeSignals"
+						value TRUE)))
+			(object Attribute
+				tool "C++ Generation"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C++ Generation"
+						name "OutputDirectory"
+						value "$@/$name")
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeGenDirName"
+						value "")
+					(object Attribute
+						tool "C++ Generation"
+						name "ComponentUnitDirectory"
+						value "RTSystem")
+					(object Attribute
+						tool "C++ Generation"
+						name "ComponentUnitName"
+						value "$name")
+					(object Attribute
+						tool "C++ Generation"
+						name "CommonPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "C++ Generation"
+						name "MakeTypeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C++ Generation"
+								name "<default>"
+								value 100)
+							(object Attribute
+								tool "C++ Generation"
+								name "MS_nmake"
+								value 0)
+							(object Attribute
+								tool "C++ Generation"
+								name "Unix_make"
+								value 1)
+							(object Attribute
+								tool "C++ Generation"
+								name "Gnu_make"
+								value 2)
+							(object Attribute
+								tool "C++ Generation"
+								name "ClearCase_clearmake"
+								value 3)
+							(object Attribute
+								tool "C++ Generation"
+								name "ClearCase_omake"
+								value 4)))
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeGenMakeType"
+						value ("MakeTypeSet" 100))
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeGenMakeCommand"
+						value "$defaultMakeCommand")
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeGenMakeArguments"
+						value "-s")
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeGenMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "C++ Generation"
+						name "CodeSyncEnabled"
+						value TRUE)
+					(object Attribute
+						tool "C++ Generation"
+						name "Generate model tags"
+						value TRUE)
+					(object Attribute
+						tool "C++ Generation"
+						name "SingleDataCompilationUnit"
+						value FALSE)
+					(object Attribute
+						tool "C++ Generation"
+						name "DocumentationSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C++ Generation"
+								name "do not generate"
+								value 0)
+							(object Attribute
+								tool "C++ Generation"
+								name "prefer in header"
+								value 1)
+							(object Attribute
+								tool "C++ Generation"
+								name "prefer in implementation"
+								value 2)
+							(object Attribute
+								tool "C++ Generation"
+								name "only in header"
+								value 3)
+							(object Attribute
+								tool "C++ Generation"
+								name "only in implementation"
+								value 4)))
+					(object Attribute
+						tool "C++ Generation"
+						name "Association end documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Attribute documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Capsule documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Capsule role documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Choice point documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Class documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Operation documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Port documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Protocol documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "State documentation"
+						value ("DocumentationSet" 0))
+					(object Attribute
+						tool "C++ Generation"
+						name "Transition documentation"
+						value ("DocumentationSet" 0))))
+			(object Attribute
+				tool "C++ Compilation"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "C++ Compilation"
+						name "TargetServicesLibrary"
+						value "$ROSERT_HOME/C++/TargetRTS")
+					(object Attribute
+						tool "C++ Compilation"
+						name "TargetConfiguration"
+						value (value Event 
+|[event_ui
+|	description='<none selected>'
+|	caption='Select...']
+						))
+					(object Attribute
+						tool "C++ Compilation"
+						name "MakeTypeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "C++ Compilation"
+								name "<default>"
+								value 100)
+							(object Attribute
+								tool "C++ Compilation"
+								name "MS_nmake"
+								value 0)
+							(object Attribute
+								tool "C++ Compilation"
+								name "Unix_make"
+								value 1)
+							(object Attribute
+								tool "C++ Compilation"
+								name "Gnu_make"
+								value 2)
+							(object Attribute
+								tool "C++ Compilation"
+								name "ClearCase_clearmake"
+								value 3)
+							(object Attribute
+								tool "C++ Compilation"
+								name "ClearCase_omake"
+								value 4)))
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompilationMakeType"
+						value ("MakeTypeSet" 100))
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompilationMakeCommand"
+						value "rtperl -S rtsetup.pl $defaultMakeCommand")
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompilationMakeArguments"
+						value "-k -s")
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompilationMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompileCommand"
+						value "$(CC)")
+					(object Attribute
+						tool "C++ Compilation"
+						name "CompileArguments"
+						value "$(DEBUG_TAG)")
+					(object Attribute
+						tool "C++ Compilation"
+						name "InclusionPaths"
+						value (value Event ""))))
+			(object Attribute
+				tool "OT::CppTargetRTS"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "default__InteractionInstance"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Attributes"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Minimum Run Time"
+						value 0)
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Cardinality Index Path"
+						value (value Event ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "DependencyList"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "HeaderPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "HeaderEnding"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "ImplementationPreface"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "ImplementationEnding"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "default__CreateAction"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Capsule Class"
+						value "")
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Initial Data"
+						value "")
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Data Descriptor"
+						value "")
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Thread"
+						value "")))
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "default__UninterpretedAction"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Code"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "default__SendAction"
+				value (list Attribute_Set
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Sender Test Driver Code"
+						value (value Text ""))
+					(object Attribute
+						tool "OT::QualityArchitectRT"
+						name "Receiver Test Driver Code"
+						value (value Text ""))))
+			(object Attribute
+				tool "OT::QualityArchitectRT"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "RTJava"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "RTJava"
+				name "default__Class"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "JavaStatic"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaFinal"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaStrictfp"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "GenerateDefaultConstructor"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "VisibilitySet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava"
+								name "public"
+								value 0)
+							(object Attribute
+								tool "RTJava"
+								name "protected"
+								value 1)
+							(object Attribute
+								tool "RTJava"
+								name "private"
+								value 2)
+							(object Attribute
+								tool "RTJava"
+								name "package"
+								value 3)))
+					(object Attribute
+						tool "RTJava"
+						name "DefaultConstructorVisibility"
+						value ("VisibilitySet" 0))
+					(object Attribute
+						tool "RTJava"
+						name "ClassFileHeader"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava"
+						name "StaticInitializerHeader"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava"
+						name "StaticInitializerFooter"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava"
+						name "InstanceInitializerHeader"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava"
+						name "InstanceInitializerFooter"
+						value (value Text ""))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Attribute"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "JavaVolatile"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaTransient"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "InitializationCode"
+						value (value Text ""))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Role"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "JavaFinal"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaVolatile"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaTransient"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "InitialValue"
+						value "")
+					(object Attribute
+						tool "RTJava"
+						name "InitializationCode"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava"
+						name "NameScopeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava"
+								name "fully qualify"
+								value 0)
+							(object Attribute
+								tool "RTJava"
+								name "import"
+								value 1)))
+					(object Attribute
+						tool "RTJava"
+						name "NameQualification"
+						value ("NameScopeSet" 0))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Operation"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "JavaFinal"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaNative"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaStrictfp"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "JavaThrows"
+						value (value Text ""))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Inherit"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "NameScopeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava"
+								name "fully qualify"
+								value 0)
+							(object Attribute
+								tool "RTJava"
+								name "import"
+								value 1)))
+					(object Attribute
+						tool "RTJava"
+						name "NameQualification"
+						value ("NameScopeSet" 0))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Uses"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "NameScopeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava"
+								name "fully qualify"
+								value 0)
+							(object Attribute
+								tool "RTJava"
+								name "import"
+								value 1)))
+					(object Attribute
+						tool "RTJava"
+						name "NameQualification"
+						value ("NameScopeSet" 1))))
+			(object Attribute
+				tool "RTJava"
+				name "default__Category"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "Java Package"
+						value FALSE)))
+			(object Attribute
+				tool "RTJava"
+				name "default__StateTransition"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "GenerateDataParameter"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "GeneratePortParameter"
+						value FALSE)))
+			(object Attribute
+				tool "RTJava"
+				name "default__BinaryBranch"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava"
+						name "GenerateDataParameter"
+						value FALSE)
+					(object Attribute
+						tool "RTJava"
+						name "GeneratePortParameter"
+						value FALSE)))
+			(object Attribute
+				tool "RTJava"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "RTJava External Project"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "RTJava External Project"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava External Project"
+						name "ClassPath"
+						value "")))
+			(object Attribute
+				tool "RTJava External Project"
+				name "HiddenTool"
+				value FALSE)
+			(object Attribute
+				tool "RTJava Project"
+				name "propertyId"
+				value "809135966")
+			(object Attribute
+				tool "RTJava Project"
+				name "default__Component"
+				value (list Attribute_Set
+					(object Attribute
+						tool "RTJava Project"
+						name "JavaVersionSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava Project"
+								name "1.1"
+								value 11)
+							(object Attribute
+								tool "RTJava Project"
+								name "1.2"
+								value 12)
+							(object Attribute
+								tool "RTJava Project"
+								name "1.3"
+								value 13)
+							(object Attribute
+								tool "RTJava Project"
+								name "1.4"
+								value 14)))
+					(object Attribute
+						tool "RTJava Project"
+						name "Java Version"
+						value ("JavaVersionSet" 14))
+					(object Attribute
+						tool "RTJava Project"
+						name "BuildJar"
+						value FALSE)
+					(object Attribute
+						tool "RTJava Project"
+						name "OutputJarFilepath"
+						value "$modelDir/$compName.jar")
+					(object Attribute
+						tool "RTJava Project"
+						name "JarCommand"
+						value "jar cvf ${dq}$(JAR_TARGET)${dq} -C ${dq}$(OUTPUT_CLASS_DIR)${dq} .")
+					(object Attribute
+						tool "RTJava Project"
+						name "OutputClassDir"
+						value "$modelDir/$compName")
+					(object Attribute
+						tool "RTJava Project"
+						name "JavaCompiler"
+						value "javac -d ${dq}$(OUTPUT_CLASS_DIR)${dq}")
+					(object Attribute
+						tool "RTJava Project"
+						name "OutputDirectory"
+						value "$modelDir/$compName")
+					(object Attribute
+						tool "RTJava Project"
+						name "BootstrapCommand"
+						value "rtjavagen -makegen -model ${dq}$modelFile${dq} -component ${dq}$qualifiedName${dq}")
+					(object Attribute
+						tool "RTJava Project"
+						name "GenerateCommand"
+						value "$defaultMake RTgenerate")
+					(object Attribute
+						tool "RTJava Project"
+						name "CompileCommand"
+						value "$defaultMake RTcompile")
+					(object Attribute
+						tool "RTJava Project"
+						name "CleanAllCommand"
+						value "$defaultMake RTcleanall")
+					(object Attribute
+						tool "RTJava Project"
+						name "MakeTypeSet"
+						value (list Attribute_Set
+							(object Attribute
+								tool "RTJava Project"
+								name "DefaultMakeType"
+								value 0)
+							(object Attribute
+								tool "RTJava Project"
+								name "Gnu_make"
+								value 3)
+							(object Attribute
+								tool "RTJava Project"
+								name "MS_nmake"
+								value 4)
+							(object Attribute
+								tool "RTJava Project"
+								name "Unix_make"
+								value 5)))
+					(object Attribute
+						tool "RTJava Project"
+						name "MakeType"
+						value ("MakeTypeSet" 0))
+					(object Attribute
+						tool "RTJava Project"
+						name "ComponentMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava Project"
+						name "CodeGenMakeInsert"
+						value (value Text ""))
+					(object Attribute
+						tool "RTJava Project"
+						name "CompileMakeInsert"
+						value (value Text ""))))
+			(object Attribute
+				tool "RTJava Project"
+				name "HiddenTool"
+				value FALSE))
+		quid "5894EE6C014A"))

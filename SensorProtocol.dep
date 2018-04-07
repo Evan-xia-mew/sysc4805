@@ -1,0 +1,4 @@
+SensorProtocol_DEPS = \
+	../src/SensorProtocol.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/SensorProtocol.h

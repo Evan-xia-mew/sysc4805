@@ -1,0 +1,7 @@
+CardReader_DEPS = \
+	../src/CardReader.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/CardReader.h \
+	../src/CardInfo.h \
+	../src/CardReaderProtocol.h \
+	../src/CardSwipe.h

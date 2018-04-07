@@ -1,0 +1,4 @@
+Test_DEPS = \
+	../src/Test.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Test.h

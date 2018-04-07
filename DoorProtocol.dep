@@ -1,0 +1,4 @@
+DoorProtocol_DEPS = \
+	../src/DoorProtocol.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/DoorProtocol.h

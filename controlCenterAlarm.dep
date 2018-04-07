@@ -1,0 +1,5 @@
+controlCenterAlarm_DEPS = \
+	../src/controlCenterAlarm.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/controlCenterAlarm.h \
+	../src/CCAlarmProtocol.h

@@ -1,0 +1,4 @@
+RTTimerId_DEPS = \
+	../src/RTTimerId.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/RTTimerId.h

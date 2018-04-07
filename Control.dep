@@ -1,0 +1,5 @@
+Control_DEPS = \
+	../src/Control.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Control.h \
+	../src/CardInfo.h

@@ -1,0 +1,5 @@
+ActiveAlarms_DEPS = \
+	../src/ActiveAlarms.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/ActiveAlarms.h \
+	../src/CCAlarmProtocol.h

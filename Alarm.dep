@@ -1,0 +1,6 @@
+Alarm_DEPS = \
+	../src/Alarm.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/Alarm.h \
+	../src/DeviceInfo.h \
+	../src/AlarmProtocol.h

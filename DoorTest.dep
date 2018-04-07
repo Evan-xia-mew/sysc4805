@@ -1,0 +1,4 @@
+DoorTest_DEPS = \
+	../src/DoorTest.cpp \
+	../src/RTSystem/TestComponent.h \
+	../src/DoorTest.h
